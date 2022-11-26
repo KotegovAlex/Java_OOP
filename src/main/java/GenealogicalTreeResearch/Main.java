@@ -17,20 +17,20 @@ public class Main {
         Human vova = new Human("Vova");
 
         GenTree genTree1 = new GenTree();
-        genTree1.append(irina, vasiliy);
-        genTree1.append(igor, vasiliy);
-        genTree1.append(irina, masha);
-        genTree1.append(irina, egor);
-        genTree1.append(vasiliy, jane);
-        genTree1.append(vasiliy, ivan);
+        genTree1.addData(irina, vasiliy);
+        genTree1.addData(igor, vasiliy);
+        genTree1.addData(irina, masha);
+        genTree1.addData(irina, egor);
+        genTree1.addData(vasiliy, jane);
+        genTree1.addData(vasiliy, ivan);
 
         GenTree genTree2 = new GenTree();
-        genTree2.append(svetlana, polina);
-        genTree2.append(vladimir, polina);
-        genTree2.append(svetlana, stepan);
-        genTree2.append(vladimir, stepan);
-        genTree2.append(svetlana, vova);
-        genTree2.append(vladimir, vova);
+        genTree2.addData(svetlana, polina);
+        genTree2.addData(vladimir, polina);
+        genTree2.addData(svetlana, stepan);
+        genTree2.addData(vladimir, stepan);
+        genTree2.addData(svetlana, vova);
+        genTree2.addData(vladimir, vova);
 
         System.out.println("1. Поиск родителей:");
         for (Human hum : (new ParentResearch(genTree2, polina).start())) {

@@ -2,22 +2,18 @@ package GenealogicalTreeResearch;
 
 import java.util.ArrayList;
 
-public class GrandParentsResearch {
-
-    ArrayList<Node> tree;
-    private Human hum;
+public class GrandParentsResearch extends Research{
 
     public GrandParentsResearch(GenTree pd, Human hum) {
-        tree = pd.getData();
-        this.hum = hum;
+        super(pd, hum);
     }
 
+    @Override
     public ArrayList<Human> start() {
-
         var parentsList = new ArrayList<Human>();
 
         for (Node node : tree) {
-            if (hum.getName().equals(node.hum2.getName())
+            if (super.getHum().getName().equals(node.hum2.getName())
                     && node.relation == Relationship.parent) {
                 parentsList.add(node.hum1);
             }

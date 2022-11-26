@@ -2,20 +2,17 @@ package GenealogicalTreeResearch;
 
 import java.util.ArrayList;
 
-public class BrotherSisterResearch {
-    ArrayList<Node> tree;
-    private Human hum;
+public class BrotherSisterResearch extends Research {
     private Human parent;
 
-    public BrotherSisterResearch(GenTree pd, Human hum) {
-        tree = pd.getData();
-        this.hum = hum;
+    public BrotherSisterResearch (GenTree pd, Human hum) {
+        super(pd, hum);
     }
 
+    @Override
     public ArrayList<Human> start() {
-
         for (Node node : tree) {
-            if (hum.getName().equals(node.hum1.getName())
+            if (super.getHum().getName().equals(node.hum1.getName())
                     && node.relation == Relationship.child) {
                 parent = node.hum2;
                 break;
@@ -26,7 +23,7 @@ public class BrotherSisterResearch {
 
         for (Node node : tree) {
             if (parent.getName().equals(node.hum1.getName())
-                    && node.relation == Relationship.parent && !node.hum2.getName().equals(hum.getName())) {
+                    && node.relation == Relationship.parent && !node.hum2.getName().equals(super.getHum().getName())) {
                 result.add(node.hum2);
             }
         }

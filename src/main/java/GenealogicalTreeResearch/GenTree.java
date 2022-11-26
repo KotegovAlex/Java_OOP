@@ -2,15 +2,16 @@ package GenealogicalTreeResearch;
 
 import java.util.ArrayList;
 
-class GenTree {
+class GenTree implements DataKeeper {
     private ArrayList<Node> tree = new ArrayList<>();
 
+    @Override
     public ArrayList<Node> getData() {
         return tree;
     }
 
-    public void append(Human parent, Human child) {
-
+    @Override
+    public void addData(Human parent, Human child) {
         tree.add(new Node(parent, Relationship.parent, child));
         tree.add(new Node(child, Relationship.child, parent));
     }
