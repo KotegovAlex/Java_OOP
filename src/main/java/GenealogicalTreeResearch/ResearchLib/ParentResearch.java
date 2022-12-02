@@ -1,8 +1,13 @@
-package GenealogicalTreeResearch;
+package GenealogicalTreeResearch.ResearchLib;
+
+import GenealogicalTreeResearch.GenTree;
+import GenealogicalTreeResearch.Human;
+import GenealogicalTreeResearch.Node;
+import GenealogicalTreeResearch.Relationship;
 
 import java.util.ArrayList;
 
-class ParentResearch extends Research {
+public class ParentResearch extends Research {
 
     public ParentResearch(GenTree pd, Human hum) {
         super(pd, hum);
