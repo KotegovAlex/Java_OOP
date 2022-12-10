@@ -1,6 +1,6 @@
 package MessengerApp.ChatLib;
 
-import MessengerApp.User;
+import MessengerApp.UserLib.User;
 
 public interface BaseChat {
     void addUser(User user);

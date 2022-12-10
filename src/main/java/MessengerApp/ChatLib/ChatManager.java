@@ -1,11 +1,8 @@
 package MessengerApp.ChatLib;
 
-import MessengerApp.User;
+import MessengerApp.UserLib.User;
 
 public class ChatManager {
-    public Chatroom createChat(String chatName) {
-        return new Chatroom(chatName);
-    }
 
     public void enterTheChat(Chatroom chatroom, User user) {
         chatroom.addUser(user);
@@ -15,7 +12,7 @@ public class ChatManager {
         chatroom.removeUser(user);
     }
 
-    public void getMassage(Chatroom chatroom, User user, String msg) {
+    public void getMessage(Chatroom chatroom, User user, String msg) {
         chatroom.printMessage(user, msg);
     }
 }

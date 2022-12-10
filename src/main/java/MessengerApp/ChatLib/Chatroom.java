@@ -1,6 +1,6 @@
 package MessengerApp.ChatLib;
 
-import MessengerApp.User;
+import MessengerApp.UserLib.User;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

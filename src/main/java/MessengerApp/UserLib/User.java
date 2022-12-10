@@ -1,4 +1,4 @@
-package MessengerApp;
+package MessengerApp.UserLib;
 
 public class User {
 
